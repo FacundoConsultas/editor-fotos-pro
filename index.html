@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor Studio | Facundo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Photo Editor <span class="badge">STUDIO</span></h1>
+        </header>
+
+        <main class="editor-layout">
+            <aside class="controls-panel">
+                <div class="control-group">
+                    <label>Brillo</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </div>
+                <div class="control-group">
+                    <label>Contraste</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </div>
+                <div class="control-group">
+                    <label>Saturación</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100">
+                </div>
+                <div class="control-group">
+                    <label>Sepia</label>
+                    <input type="range" id="sepia" min="0" max="100" value="0">
+                </div>
+                <div class="control-group">
+                    <label>Desenfoque (Blur)</label>
+                    <input type="range" id="blur" min="0" max="10" value="0">
+                </div>
+
+                <div class="actions">
+                    <input type="file" id="upload-file" hidden accept="image/*">
+                    <button class="btn btn-primary" id="upload-btn">Subir Imagen</button>
+                    <button class="btn btn-success" id="download-btn">Descargar Resultado</button>
+                    <button class="btn btn-danger" id="reset-btn">Resetear Filtros</button>
+                </div>
+            </aside>
+
+            <section class="canvas-area">
+                <div class="canvas-wrapper">
+                    <canvas id="main-canvas"></canvas>
+                    <p id="placeholder-text">Sube una foto para empezar a editar</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
